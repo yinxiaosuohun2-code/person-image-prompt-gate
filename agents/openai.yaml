@@ -1,0 +1,4 @@
+interface:
+  display_name: "人物图提示词审核"
+  short_description: "生成人物图前先审核提示词冲突，按 9 模块方法优化后再执行。"
+  default_prompt: "Use $person-image-prompt-gate to validate my person image prompt, fix conflicts if needed, and generate only after the prompt passes."
