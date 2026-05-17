@@ -106,7 +106,7 @@ The user provided a character reference and requested a raw passerby iPhone snap
 
 Validation focus: the original prompt requested twin tails and elf ears, but the reference image did not clearly contain those cues. The generation prompt corrected toward visible reference features instead: long flowing pink hair, soft gradients, golden eyes, small silver hair ornament, blue-purple and white academy-style outfit, gold trim, yellow bow, jewel brooch, and gentle elegant character vibe. The candid imperfections were kept as intentional realism features, while the negative prompt protected face readability, anatomy, and one clear main subject.
 
-<img src="examples/candid-aemeath-iphone-snapshot.jpg" alt="Candid Aemeath iPhone snapshot example" width="520">
+<img src="examples/candid-aemeath-iphone-snapshot.png" alt="Candid Aemeath iPhone snapshot example" width="520">
 
 Actual prompt and correction notes: [examples/candid-aemeath-iphone-snapshot-prompt.md](examples/candid-aemeath-iphone-snapshot-prompt.md)
 

@@ -106,7 +106,7 @@ $person-image-prompt-gate
 
 审核重点：原始提示词要求“双马尾”和“精灵耳”，但参考图没有清晰呈现这些特征。因此实际生成提示词改为保留参考图中可见的识别点：粉色长发、柔和发色渐变、金色眼睛、小银色发饰、蓝紫白学院风服装、金色镶边、黄色蝴蝶结、宝石胸针和温柔优雅的角色神韵。抓拍里的不完美被保留为真实感特征，同时负面提示词保护脸部可读性、肢体结构和“一个清晰主角”。
 
-<img src="examples/candid-aemeath-iphone-snapshot.jpg" alt="Candid Aemeath iPhone snapshot example" width="520">
+<img src="examples/candid-aemeath-iphone-snapshot.png" alt="Candid Aemeath iPhone snapshot example" width="520">
 
 实际生成提示词和纠错说明：[examples/candid-aemeath-iphone-snapshot-prompt.md](examples/candid-aemeath-iphone-snapshot-prompt.md)
 

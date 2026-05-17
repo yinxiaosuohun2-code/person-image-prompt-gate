@@ -13,7 +13,7 @@ The original user prompt intentionally requested a raw iPhone snapshot with awkw
 
 ## Generated Image
 
-<img src="candid-aemeath-iphone-snapshot.jpg" alt="Candid Aemeath iPhone snapshot example" width="520">
+<img src="candid-aemeath-iphone-snapshot.png" alt="Candid Aemeath iPhone snapshot example" width="520">
 
 ## Actual Generation Prompt
 

@@ -7,7 +7,7 @@
 - Added `Candid Snapshot Realism Mode` to `SKILL.md`.
 - Added support for raw iPhone-style candid person images with awkward crop, foreground occlusion, slight misfocus, motion blur, lens smudge, JPEG artifacts, mixed street or restaurant lighting, and blurred non-identifiable background people.
 - Added a dedicated candid snapshot generation structure and negative prompt style.
-- Added a real generated example image: `examples/candid-aemeath-iphone-snapshot.jpg`.
+- Added a real generated example image: `examples/candid-aemeath-iphone-snapshot.png`.
 - Added the actual generation prompt and correction notes: `examples/candid-aemeath-iphone-snapshot-prompt.md`.
 
 ### Changed
