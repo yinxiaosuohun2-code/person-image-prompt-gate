@@ -16,12 +16,21 @@
 
 - 动漫角色立绘
 - COSPLAY 人物图
+- iPhone 随手拍风格的 COS 抓拍图
 - 单人角色海报
 - 人物插图
 - 写实/半写实人物摄影感图
 - 游戏/动漫角色的主题变体图
 
 不建议用于多人群像、电商图、广告视觉、产品图、纯风景图或非人物主体图。
+
+## 手机抓拍真实感模式
+
+这个模式用于处理原汁原味的手机随手拍提示词，包括：构图笨拙、镜头倾斜、主体偏离中心、前景遮挡、轻微失焦、运动模糊、镜头油污、JPEG 压缩感、街头或餐厅混合光，以及模糊且不可识别的背景路人或食客。
+
+在这个模式下，Skill 会把“单人约束”理解为“一个清晰主角”。背景人物可以作为氛围存在，但必须是模糊、不可识别、次要的，不能成为新的主体。
+
+这些手机照片里的“不完美”不会单独触发纠错。只有当它们破坏核心目标时，Skill 才会暂停，例如：主角脸部不可读、角色识别点被遮住、背景人物变成清晰副主体，或同时要求“原始手机抓拍”和“精修棚拍大片”。
 
 ## 9 模块审核法
 
@@ -44,7 +53,7 @@ Skill 会按以下顺序审核人物图提示词：
 将本仓库复制到 Codex skills 目录：
 
 ```powershell
-git clone https://github.com/YOUR_NAME/person-image-prompt-gate.git "$env:USERPROFILE\.codex\skills\person-image-prompt-gate"
+git clone https://github.com/yinxiaosuohun2-code/person-image-prompt-gate.git "$env:USERPROFILE\.codex\skills\person-image-prompt-gate"
 ```
 
 重启 Codex 后，在对话中调用：
@@ -90,6 +99,18 @@ $person-image-prompt-gate
 审核结果：成人年龄明确，角色变体逻辑成立，动态动作与镜头兼容，背景元素有层次，负面提示词覆盖多人、拼图、文字、水印、畸形手和低质量风险，因此直接生成。
 
 <img src="examples/anime-aemeath-surfboard.png" alt="Anime surfboard character example" width="520">
+
+### 案例 5：参考图辅助的 iPhone 路人视角抓拍
+
+用户上传了角色参考图，并提出：一位成年女性 Cosplayer 走在城市街道前方，突然回头微笑；画面是路人视角的 iPhone 随手拍，带有黄昏黄金时段、坏构图、前景遮挡、相机抖动、轻微失焦、镜头油污和微信画质压缩感。
+
+审核重点：原始提示词要求“双马尾”和“精灵耳”，但参考图没有清晰呈现这些特征。因此实际生成提示词改为保留参考图中可见的识别点：粉色长发、柔和发色渐变、金色眼睛、小银色发饰、蓝紫白学院风服装、金色镶边、黄色蝴蝶结、宝石胸针和温柔优雅的角色神韵。抓拍里的不完美被保留为真实感特征，同时负面提示词保护脸部可读性、肢体结构和“一个清晰主角”。
+
+<img src="examples/candid-aemeath-iphone-snapshot.jpg" alt="Candid Aemeath iPhone snapshot example" width="520">
+
+实际生成提示词和纠错说明：[examples/candid-aemeath-iphone-snapshot-prompt.md](examples/candid-aemeath-iphone-snapshot-prompt.md)
+
+完整修改说明：[CHANGELOG.md](CHANGELOG.md)
 
 ## 最小使用模板
 

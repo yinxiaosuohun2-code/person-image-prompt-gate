@@ -16,12 +16,21 @@ For broader GPT-Image-2 API examples, prompt references, and community contribut
 
 - Anime character standing art
 - Cosplay character images
+- Candid iPhone-style cosplay snapshots
 - Single-character posters
 - Person-focused illustrations
 - Realistic or semi-realistic portrait-style images
 - Themed variants of game or anime characters
 
 This Skill is not intended for group images, ecommerce images, advertising visuals, product images, pure landscapes, or non-person subjects.
+
+## Candid Snapshot Realism Mode
+
+This mode supports raw phone-photo prompts that intentionally ask for imperfect realism: awkward crop, tilted angle, off-center subject, foreground occlusion, slight misfocus, motion blur, lens smudge, JPEG artifacts, mixed street or restaurant lighting, and blurred non-identifiable background people.
+
+In this mode, the Skill treats "single subject" as one clear main subject. Background pedestrians or diners are allowed only as atmosphere if they stay blurred, non-identifiable, and secondary.
+
+Intentional phone-photo flaws should not trigger correction by themselves. The Skill should only pause if those flaws destroy the core goal, such as making the face unreadable, covering the character cues, turning background people into extra subjects, or asking for a raw snapshot and polished studio composition at the same priority.
 
 ## The 9-Module Prompt Check
 
@@ -44,7 +53,7 @@ If the prompt contains conflicts such as "full-body front standing shot" plus "l
 Clone this repository into your Codex skills directory:
 
 ```powershell
-git clone https://github.com/YOUR_NAME/person-image-prompt-gate.git "$env:USERPROFILE\.codex\skills\person-image-prompt-gate"
+git clone https://github.com/yinxiaosuohun2-code/person-image-prompt-gate.git "$env:USERPROFILE\.codex\skills\person-image-prompt-gate"
 ```
 
 Restart Codex, then call:
@@ -90,6 +99,18 @@ The user provided character references and requested an anime cinematic dynamic 
 Validation result: adult age was explicit, the character-variant logic was coherent, the dynamic action matched the camera framing, background elements were layered, and the negative prompt covered extra people, collage, text, watermark, deformed hands, and low-quality risks. The image was generated directly.
 
 <img src="examples/anime-aemeath-surfboard.png" alt="Anime surfboard character example" width="520">
+
+### Example 5: Candid iPhone Snapshot with Reference-Cue Correction
+
+The user provided a character reference and requested a raw passerby iPhone snapshot: one adult female cosplayer walking ahead on a city street, suddenly turning back with a warm smile, golden-hour light, bad composition, foreground occlusion, camera shake, slight misfocus, lens smudge, and WeChat-style JPEG compression.
+
+Validation focus: the original prompt requested twin tails and elf ears, but the reference image did not clearly contain those cues. The generation prompt corrected toward visible reference features instead: long flowing pink hair, soft gradients, golden eyes, small silver hair ornament, blue-purple and white academy-style outfit, gold trim, yellow bow, jewel brooch, and gentle elegant character vibe. The candid imperfections were kept as intentional realism features, while the negative prompt protected face readability, anatomy, and one clear main subject.
+
+<img src="examples/candid-aemeath-iphone-snapshot.jpg" alt="Candid Aemeath iPhone snapshot example" width="520">
+
+Actual prompt and correction notes: [examples/candid-aemeath-iphone-snapshot-prompt.md](examples/candid-aemeath-iphone-snapshot-prompt.md)
+
+Full modification notes: [CHANGELOG.md](CHANGELOG.md)
 
 ## Minimal Prompt Template
 
